@@ -9,6 +9,7 @@ import Clients from "@/sections/Clients";
 import Approach from "@/sections/Approach";
 import RecentProjects from "@/sections/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { ServicesCarousel } from "@/sections/ServicesCarousel";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <Hero />
         <Grid />
         <RecentProjects />
+        <ServicesCarousel />
         <Clients />
         <Approach />
         <Footer />
