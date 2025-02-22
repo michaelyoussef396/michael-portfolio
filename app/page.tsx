@@ -11,6 +11,7 @@ import RecentProjects from "@/sections/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { ServicesCarousel } from "@/sections/ServicesCarousel";
 import { Benefits } from "@/sections/Benefits";
+import FAQ from "@/components/FAQ";
 const Home = () => {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
@@ -22,6 +23,7 @@ const Home = () => {
         <ServicesCarousel />
         <Benefits />
         <Clients />
+        <FAQ />
         <Approach />
         <Footer />
       </div>
