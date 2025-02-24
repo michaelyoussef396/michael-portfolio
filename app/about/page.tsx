@@ -7,6 +7,7 @@ import Certificate from "@/sections/Certificate";
 import Footer from "@/components/Footer";
 import Hero3D from "@/components/Hero3D";
 import About from "@/sections/About";
+import Tech from "@/sections/Tech";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <Hero3D />
         <About />
         <Certificate />
+        <Tech />
         <Footer />
       </div>
     </main>
