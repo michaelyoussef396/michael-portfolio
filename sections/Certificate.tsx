@@ -5,7 +5,7 @@ import { Button } from "../components/ui/MovingBorders";
 
 const Certificate = () => {
   return (
-    <div className="py-20 w-full">
+    <div id="Cert" className="py-20 w-full">
       <h1 className="heading font-bold italic">
         My <span className="text-purple">work experience</span>
       </h1>
