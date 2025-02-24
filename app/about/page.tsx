@@ -8,6 +8,9 @@ import Footer from "@/components/Footer";
 import Hero3D from "@/components/Hero3D";
 import About from "@/sections/About";
 import Tech from "@/sections/Tech";
+import Experience from "@/sections/Experience";
+import FAQ from "@/components/FAQ";
+import { EmailCTA } from "@/components/EmailCTA";
 
 const Home = () => {
   return (
@@ -16,8 +19,11 @@ const Home = () => {
         <FloatingNav navItems={navItems} />
         <Hero3D />
         <About />
+        <Experience />
         <Certificate />
         <Tech />
+        <FAQ />
+        <EmailCTA />
         <Footer />
       </div>
     </main>

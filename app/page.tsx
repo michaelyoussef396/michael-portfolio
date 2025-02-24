@@ -9,7 +9,7 @@ import Clients from "@/sections/Clients";
 import Approach from "@/sections/Approach";
 import RecentProjects from "@/sections/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { ServicesCarousel } from "@/components/ServicesCarousel";
+import { ServicesCarousel } from "@/sections/ServicesCarousel";
 import { Benefits } from "@/sections/Benefits";
 import FAQ from "@/components/FAQ";
 import { EmailCTA } from "@/components/EmailCTA";
