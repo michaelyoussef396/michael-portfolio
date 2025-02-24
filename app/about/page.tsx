@@ -6,6 +6,7 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Certificate from "@/sections/Certificate";
 import Footer from "@/components/Footer";
 import Hero3D from "@/components/Hero3D";
+import About from "@/sections/About";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero3D />
+        <About />
         <Certificate />
         <Footer />
       </div>
