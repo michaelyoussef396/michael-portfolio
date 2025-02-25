@@ -1,9 +1,8 @@
 "use client";
+
 import Image from "next/image";
 import React from "react";
-import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-import { FaLocationArrow } from "react-icons/fa6";
-import MagicButton from "@/components/MagicButton";
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel"; // Adjust path as needed
 
 export function ServicesCarousel() {
   const cards = servicesData.map((card, index) => (
@@ -22,122 +21,110 @@ export function ServicesCarousel() {
 
 const servicesData = [
   {
-    category: "Web Development and Design",
+    category: "Web Development & Design",
     title: "Custom, Responsive Websites",
     src: "/service1.png",
     content: (
       <div className="bg-gray-50 dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4 space-y-6">
-        <p className="text-white text-base md:text-lg font-sans max-w-3xl mx-auto">
-          I build custom, responsive websites that seamlessly blend cutting-edge
-          design with robust functionality. By understanding your brand and
-          target audience, I create sites that not only look stunning but also
-          perform flawlessly across all devices. Every project is optimized for
-          speed, accessibility, and user engagement, ensuring that your online
-          presence stands out in today&apos;s competitive market.
+        <p className="text-white text-lg font-sans max-w-3xl mx-auto">
+          A strong online presence starts with a well-designed, functional website. We specialize in crafting 
+          custom, high-performance websites that blend aesthetics with seamless functionality.
         </p>
-        <a href="/services/web-development-and-design">
-          <MagicButton
-            title="Learn More"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+        <ul className="text-white text-lg font-sans max-w-3xl mx-auto list-disc pl-6">
+          <li>✅ Custom Framer, React, and Next.js development</li>
+          <li>✅ Mobile-first & fully responsive designs</li>
+          <li>✅ Optimized for speed, SEO, and accessibility</li>
+          <li>✅ Strategic UI/UX design for maximum engagement</li>
+          <li>✅ Scalable, easy-to-maintain websites</li>
+        </ul>
+        <p className="text-white text-lg font-sans max-w-3xl mx-auto">
+          Whether you're launching a new website or redesigning an outdated one, our expertise guarantees a digital experience that drives business growth.
+        </p>
       </div>
     ),
   },
   {
     category: "SEO & Digital Marketing",
     title: "Boost Your Visibility",
-    src: "/serrvice2.png",
+    src: "/service2.png",
     content: (
       <div className="bg-gray-50 dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4 space-y-6">
-        <p className="text-white text-base md:text-lg font-sans max-w-3xl mx-auto">
-          Enhance your online presence with a comprehensive SEO and digital
-          marketing strategy designed to drive targeted traffic and increase
-          conversions. I utilize in-depth keyword research, on-page
-          optimization, and compelling content creation to improve search
-          rankings and brand visibility. With a focus on measurable results, my
-          approach ensures sustainable growth and a strong competitive edge.
+        <p className="text-white text-lg font-sans max-w-3xl mx-auto">
+          In a crowded digital landscape, your brand needs to stand out. Our SEO & digital marketing strategies 
+          ensure that your business reaches the right audience at the right time.
         </p>
-        <a href="/services/seo-digital-marketing">
-          <MagicButton
-            title="Learn More"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+        <ul className="text-white text-lg font-sans max-w-3xl mx-auto list-disc pl-6">
+          <li>✅ Keyword research & on-page SEO for higher rankings</li>
+          <li>✅ Technical SEO (site structure, speed, indexing fixes)</li>
+          <li>✅ Content marketing & link-building for authority growth</li>
+          <li>✅ Local SEO (Google My Business, maps, citations)</li>
+          <li>✅ Social media & paid ad strategies</li>
+        </ul>
+        <p className="text-white text-lg font-sans max-w-3xl mx-auto">
+          We integrate email marketing, paid ads, and conversion rate optimization (CRO) to generate leads and maximize your ROI.
+        </p>
       </div>
     ),
   },
   {
     category: "Full-Stack App Development",
-    title: "Robust Backend Solutions",
+    title: "Scalable, High-Performance Web & Mobile Apps",
     src: "/service3.jpg",
     content: (
       <div className="bg-gray-50 dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4 space-y-6">
-        <p className="text-white text-base md:text-lg font-sans max-w-3xl mx-auto">
-          Leveraging modern frameworks and best practices, I develop full-stack
-          applications that are both scalable and secure. From API design and
-          database integration to dynamic front-end interfaces, every solution
-          is crafted to deliver exceptional performance and reliability. My
-          focus on clean, maintainable code ensures that your digital products
-          are built to grow with your business.
+        <p className="text-white text-lg font-sans max-w-3xl mx-auto">
+          We build end-to-end software solutions tailored to your needs. From complex web apps to enterprise software, 
+          we develop scalable and reliable applications that grow with your business.
         </p>
-        <a href="/services/full-stack-app-development">
-          <MagicButton
-            title="Learn More"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+        <ul className="text-white text-lg font-sans max-w-3xl mx-auto list-disc pl-6">
+          <li>✅ Custom-built web & mobile apps</li>
+          <li>✅ Backend architecture (Node.js, Python, SQL/NoSQL)</li>
+          <li>✅ API integrations & automation workflows</li>
+          <li>✅ Cloud deployment & security optimization</li>
+          <li>✅ User-friendly, intuitive UI/UX</li>
+        </ul>
       </div>
     ),
   },
   {
     category: "AI & Automation",
-    title: "Intelligent, Automated Solutions",
+    title: "Intelligent Workflows, Smarter Business Operations",
     src: "/services5.jpg",
     content: (
       <div className="bg-gray-50 dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4 space-y-6">
-        <p className="text-white text-base md:text-lg font-sans max-w-3xl mx-auto">
-          Transform your business processes with intelligent AI and automation
-          solutions that boost efficiency and innovation. I develop systems that
-          streamline repetitive tasks, provide data-driven insights, and empower
-          you to make smarter decisions. My solutions are designed to integrate
-          seamlessly with your existing workflows, helping you stay ahead in a
-          rapidly evolving digital landscape.
+        <p className="text-white text-lg font-sans max-w-3xl mx-auto">
+          AI and automation aren’t just buzzwords—they’re essential for scaling businesses efficiently. 
+          We create intelligent automation systems that enhance productivity, streamline operations, and provide 
+          data-driven insights.
         </p>
-        <a href="/services/ai-automation">
-          <MagicButton
-            title="Learn More"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+        <ul className="text-white text-lg font-sans max-w-3xl mx-auto list-disc pl-6">
+          <li>✅ AI-powered chatbots & virtual assistants</li>
+          <li>✅ Automated data processing & reporting</li>
+          <li>✅ Predictive analytics for smarter decision-making</li>
+          <li>✅ CRM automation (email workflows, lead nurturing)</li>
+          <li>✅ Marketing automation & customer engagement solutions</li>
+        </ul>
       </div>
     ),
   },
   {
-    category: "Email Marketing",
-    title: "Automated, Targeted Campaigns",
-    src: "/service3.jpg",
+    category: "Email Marketing & Automation",
+    title: "Targeted Campaigns That Drive Conversions",
+    src: "/service4.jpg",
     content: (
       <div className="bg-gray-50 dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4 space-y-6">
-        <p className="text-white text-base md:text-lg font-sans max-w-3xl mx-auto">
-          Engage your audience with personalized email marketing campaigns
-          designed to drive results. I craft tailored strategies combining
-          compelling copy, eye-catching design, and data-driven insights to
-          nurture leads and build lasting customer relationships. My approach
-          ensures that every email not only resonates with your audience but
-          also contributes to your overall growth and ROI.
+        <p className="text-white text-lg font-sans max-w-3xl mx-auto">
+          Email remains one of the most profitable marketing channels, but success requires strategy, 
+          personalization, and automation. We design and execute high-converting email campaigns that 
+          engage your audience and turn leads into loyal customers.
         </p>
-        <a href="/services/email-marketing">
-          <MagicButton
-            title="Learn More"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+        <ul className="text-white text-lg font-sans max-w-3xl mx-auto list-disc pl-6">
+          <li>✅ Automated email sequences for nurturing leads</li>
+          <li>✅ Personalized drip campaigns for higher engagement</li>
+          <li>✅ A/B testing for improved open & click rates</li>
+          <li>✅ Data-driven email copy & design</li>
+          <li>✅ CRM & workflow automation</li>
+        </ul>
       </div>
     ),
   },
