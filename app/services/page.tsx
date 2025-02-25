@@ -7,7 +7,7 @@ import FAQ from "@/components/FAQ";
 import { EmailCTA } from "@/components/EmailCTA";
 import ServicesHero from "@/sections/ServicesHero";
 import ServicesCarousel from "@/sections/ServicesCarousel";
-const Portfolio = () => {
+const Services = () => {
   return (
     <main className="overflow-hidden bg-black-100 w-full h-full">
       <FloatingNav navItems={navItems} />
@@ -20,4 +20,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Services;
