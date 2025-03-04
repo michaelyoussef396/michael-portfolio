@@ -22,7 +22,6 @@ const ServicesHero: React.FC = () => {
         loop
         muted
         playsInline
-        poster="/services-poster.jpg"
         style={{ backgroundColor: "#000000" }}
       />
 

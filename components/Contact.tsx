@@ -3,7 +3,6 @@
 import React, { useRef, useState, FormEvent, ChangeEvent } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "@/lib/motion";
@@ -88,6 +87,7 @@ const Contact: React.FC = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
+              autoComplete="name"
               type="text"
               name="name"
               value={form.name}
@@ -95,13 +95,16 @@ const Contact: React.FC = () => {
               placeholder="What's your good name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               required
+              id="name"
             />
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
             <input
+              autoComplete="email"
               type="email"
               name="email"
+              id="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"

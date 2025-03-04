@@ -9,7 +9,7 @@ import ServicesHero from "@/sections/ServicesHero";
 import ServicesCarousel from "@/sections/ServicesCarousel";
 const Services = () => {
   return (
-    <main className="overflow-hidden bg-black-100 w-full h-full">
+    <main className="relative overflow-hidden bg-black-100 w-full h-full">
       <FloatingNav navItems={navItems} />
       <ServicesHero />
       <ServicesCarousel />

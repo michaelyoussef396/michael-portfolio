@@ -22,7 +22,6 @@ const HeroBlog: React.FC = () => {
         loop
         muted
         playsInline
-        poster="/video-poster.jpg"
         style={{ backgroundColor: "#000000" }}
       />
 
