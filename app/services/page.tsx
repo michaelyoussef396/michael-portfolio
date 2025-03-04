@@ -1,21 +1,16 @@
 "use client";
-
-import { navItems, servicesFAQs } from "@/data";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import Footer from "@/components/Footer";
-import FAQ from "@/components/FAQ";
-import { EmailCTA } from "@/components/EmailCTA";
-import ServicesHero from "@/sections/ServicesHero";
+import HeroVid from "@/components/HeroVid";
 import ServicesCarousel from "@/sections/ServicesCarousel";
 const Services = () => {
   return (
     <main className="relative overflow-hidden bg-black-100 w-full h-full">
-      <FloatingNav navItems={navItems} />
-      <ServicesHero />
+      <HeroVid
+        videoSrc="/services.mp4"
+        subtitle="Innovative. Tailored. Reliable."
+        title="Elevate Your"
+        highlight="Services"
+      />
       <ServicesCarousel />
-      <FAQ faqs={servicesFAQs} title="Services FAQs" />
-      <EmailCTA />
-      <Footer />
     </main>
   );
 };

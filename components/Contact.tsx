@@ -1,18 +1,12 @@
 "use client";
-
 import React, { useRef, useState, FormEvent, ChangeEvent } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "@/lib/motion";
+import { FormState } from "@/types";
 
-// Define form state type
-interface FormState {
-  name: string;
-  email: string;
-  message: string;
-}
 
 const Contact: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);

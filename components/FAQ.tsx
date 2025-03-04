@@ -2,16 +2,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IconPlus, IconMinus } from "@tabler/icons-react";
+import { FAQProps } from "@/types";
 
-interface FAQItem {
-  question: string;
-  answer: string;
-}
 
-interface FAQProps {
-  faqs: FAQItem[];
-  title?: string;
-}
 
 const FAQ: React.FC<FAQProps> = ({ faqs, title = "Frequently Asked Questions" }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -23,16 +16,13 @@ const FAQ: React.FC<FAQProps> = ({ faqs, title = "Frequently Asked Questions" })
   return (
     <section className="relative w-full px-4 py-20 bg-black-100 text-white font-sans">
       <div className="max-w-5xl mx-auto">
-        {/* Section Heading */}
         <h2 className="text-3xl md:text-5xl font-bold mb-8 italic text-center">
           {title} <span className="text-purple">FAQs</span>
         </h2>
 
-        {/* FAQ Container */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="border-b border-neutral-700 pb-4">
-              {/* Question Toggle */}
               <button
                 onClick={() => toggleFAQ(index)}
                 className="flex items-center justify-between w-full text-left focus:outline-none group"
@@ -45,7 +35,6 @@ const FAQ: React.FC<FAQProps> = ({ faqs, title = "Frequently Asked Questions" })
                 </div>
               </button>
 
-              {/* Answer */}
               <AnimatePresence>
                 {activeIndex === index && (
                   <motion.div

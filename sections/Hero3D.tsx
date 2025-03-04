@@ -5,17 +5,14 @@ import { ComputersCanvas } from "../components/canvas";
 const Hero3D = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
-      {/* Text Container */}
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
-        {/* Decorative bar and dot */}
         <div className="flex flex-col justify-center items-center mt-5 ml-6">
           <div className="w-5 h-5 rounded-full bg-purple" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        {/* Headline and Subtext */}
         <div className="ml-4">
           <h1 className={`${styles.heroHeadText} text-white font-bold italic`}>
             Hi, I'm <span className="text-purple">Michael Youssef</span>
@@ -33,10 +30,8 @@ const Hero3D = () => {
         </div>
       </div>
 
-      {/* 3D Canvas */}
       <ComputersCanvas />
 
-      {/* Scroll-to-Cert Button (Positioned Lower) */}
       <div className="absolute w-full flex justify-center items-center">
         <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
           <motion.div

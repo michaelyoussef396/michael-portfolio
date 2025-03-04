@@ -1,14 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { AboutItem } from "@/types";
 
-// Define a type for each about item.
-interface AboutItem {
-  title: string;
-  description: string;
-  imgUrl: string;
-}
 
-// Static data for your 4 main services/skills.
 const aboutItems: AboutItem[] = [
   {
     title: "Full-Stack Development",

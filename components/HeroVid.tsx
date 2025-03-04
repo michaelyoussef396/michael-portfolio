@@ -2,8 +2,17 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { HeroProps } from "@/types";
 
-const ServicesHero: React.FC = () => {
+
+
+const HeroVid: React.FC<HeroProps> = ({
+  videoSrc,
+  subtitle,
+  title,
+  highlight,
+  overlayOpacity = "bg-black/40",
+}) => {
   return (
     <motion.section
       initial={{ opacity: 0, scale: 1, rotate: 2 }}
@@ -17,7 +26,7 @@ const ServicesHero: React.FC = () => {
       {/* Background Video */}
       <motion.video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/services.mp4"
+        src={videoSrc}
         autoPlay
         loop
         muted
@@ -25,24 +34,24 @@ const ServicesHero: React.FC = () => {
         style={{ backgroundColor: "#000000" }}
       />
 
-      {/* Overlay for Better Text Visibility */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      {/* Overlay with Dynamic Opacity */}
+      <div className={`absolute inset-0 ${overlayOpacity}`}></div>
 
-      {/* Text Container */}
+      {/* Hero Content */}
       <div className="relative z-[2] flex flex-col items-center justify-center text-center max-w-[90%] px-5 sm:px-20 mt-[100px]">
-        {/* Tagline */}
+        {/* Subtitle */}
         <div className="mb-4 px-5 py-2 bg-purple backdrop-blur-md border border-white/10 rounded-full text-white uppercase text-sm font-bold italic tracking-wide">
-          Innovative. Tailored. Reliable.
+          {subtitle}
         </div>
 
-        {/* Main Hero Text */}
+        {/* Title */}
         <h1 className="text-white text-3xl font-raleway font-bold text-[9vw] sm:text-[7vw] leading-[1.2] uppercase">
-          Elevate Your{" "}
-          <span className="text-purple font-bold italic">Services</span> with Next-Gen Digital Solutions
+          {title}{" "}
+          <span className="text-purple font-bold italic">{highlight}</span>
         </h1>
       </div>
     </motion.section>
   );
 };
 
-export default ServicesHero;
+export default HeroVid;

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Carousel, Card } from "@/components/ui/apple-cards-carousel"; // Adjust path as needed
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 
 export function ServicesCarousel() {
   const cards = servicesData.map((card, index) => (

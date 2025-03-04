@@ -23,7 +23,6 @@ const Hero = () => {
        absolute top-0 left-0 flex items-center justify-center"
       >
         <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
           className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
          bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
@@ -46,7 +45,7 @@ const Hero = () => {
             results. Let’s create something extraordinary.
           </p>
 
-          <a href="#about">
+          <a href="/portfolio">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}

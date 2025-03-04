@@ -1,22 +1,16 @@
 "use client";
 
-import { blogFAQs, navItems } from "@/data";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import Footer from "@/components/Footer";
-import FAQ from "@/components/FAQ";
-import { EmailCTA } from "@/components/EmailCTA";
-import HeroPortfolio from "@/sections/HeroPortfolio";
-import HeroBlog from "@/sections/HeroBlog";
+import HeroVid from "@/components/HeroVid";
 
 const blog = () => {
   return (
     <main className="overflow-hidden bg-black-100 w-full h-full">
-      {/* If you want it truly full screen, remove max-width constraints */}
-      <FloatingNav navItems={navItems} />
-      <HeroBlog />
-      <FAQ faqs={blogFAQs} title="Blog FAQs"/>
-      <EmailCTA />
-      <Footer />
+      <HeroVid
+        videoSrc="/blog.mp4"
+        subtitle="Insights, Stories & Knowledge"
+        title="Exploring Ideas &"
+        highlight="Sharing Perspectives"
+      />
     </main>
   );
 };

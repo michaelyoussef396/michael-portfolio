@@ -1,15 +1,9 @@
 "use client";
 
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
+import { placeholders } from "@/data";
 
 export function EmailCTA() {
-  const placeholders = [
-    "Where can we send updates?",
-    "Drop your best email here.",
-    "Ready to level up your online presence?",
-    "Get the latest on web dev & AI solutions!",
-    "Stay in the loop—subscribe now!",
-  ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log("Email Input:", e.target.value);
@@ -23,7 +17,6 @@ export function EmailCTA() {
 
   return (
     <div className="min-h-[40rem] flex flex-col justify-center items-center px-4">
-      {/* Headline */}
       <h2
         className="
           mb-6
@@ -42,7 +35,6 @@ export function EmailCTA() {
         Stay in the Loop
       </h2>
 
-      {/* Subheading */}
       <p
         className="
           mb-10
@@ -62,7 +54,6 @@ export function EmailCTA() {
         solutions.
       </p>
 
-      {/* Input Component */}
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}

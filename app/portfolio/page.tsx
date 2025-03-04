@@ -1,21 +1,16 @@
 "use client";
-
-import { navItems, portfolioFAQs } from "@/data";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import Footer from "@/components/Footer";
-import FAQ from "@/components/FAQ";
-import { EmailCTA } from "@/components/EmailCTA";
-import HeroPortfolio from "@/sections/HeroPortfolio";
+import HeroVid from "@/components/HeroVid";
 
 const Portfolio = () => {
   return (
     <main className="overflow-hidden bg-black-100 w-full h-full">
-      {/* If you want it truly full screen, remove max-width constraints */}
-      <FloatingNav navItems={navItems} />
-      <HeroPortfolio />
-      <FAQ faqs={portfolioFAQs} title="Portfolio FAQs" />
-      <EmailCTA />
-      <Footer />
+      <HeroVid
+        videoSrc="/portfolio.mp4"
+        subtitle="Bold, Creative, & Unforgettable"
+        title="Shaping My"
+        highlight="Portfolio"
+        overlayOpacity="bg-black/30"
+      />
     </main>
   );
 };
