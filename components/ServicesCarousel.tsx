@@ -36,7 +36,7 @@ const servicesData = [
           <li>✅ Scalable, easy-to-maintain websites</li>
         </ul>
         <p className="text-white text-lg font-sans max-w-3xl mx-auto">
-          Whether you're launching a new website or redesigning an outdated one, our expertise guarantees a digital experience that drives business growth.
+          Whether you&apos;re launching a new website or redesigning an outdated one, our expertise guarantees a digital experience that drives business growth.
         </p>
       </div>
     ),

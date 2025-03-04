@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { AboutItem } from "@/types";
+import Image from "next/image";
 
 
 const aboutItems: AboutItem[] = [
@@ -48,7 +49,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.5, type: "tween" }}
             className="flex flex-col justify-start items-start m-8 w-[190px] min-[2000px]:w-[370px] min-[2000px]:mx-16"
           >
-            <img
+            <Image
               alt={about.title}
               src={about.imgUrl}
               className="w-full h-[170px] min-[2000px]:h-[320px] rounded-[15px] object-cover"

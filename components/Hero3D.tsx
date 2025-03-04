@@ -15,7 +15,7 @@ const Hero3D = () => {
 
         <div className="ml-4">
           <h1 className={`${styles.heroHeadText} text-white font-bold italic`}>
-            Hi, I'm <span className="text-purple">Michael Youssef</span>
+            Hi, I&apos;m <span className="text-purple">Michael Youssef</span>
           </h1>
           <p
             className={`${styles.heroSubText} mt-2 text-white text-6sm font-bold italic`}
