@@ -5,7 +5,7 @@ import { aboutUsFAQs, navItems } from "@/data";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Certificate from "@/sections/Certificate";
 import Footer from "@/components/Footer";
-import Hero3D from "@/components/Hero3D";
+import Hero3D from "@/sections/Hero3D";
 import About from "@/sections/About";
 import Tech from "@/sections/Tech";
 import Experience from "@/sections/Experience";

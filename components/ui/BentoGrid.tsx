@@ -1,16 +1,16 @@
-"use client";
+"use clint";
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
-// Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 import { cn } from "@/lib/utils";
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
-import * as THREE from 'three';
 import MagicButton from "../MagicButton";
 
 export const BentoGrid = ({
@@ -20,20 +20,7 @@ export const BentoGrid = ({
   className?: string;
   children?: React.ReactNode;
 }) => {
-  // Check for NaN values in geometry positions
-  const checkForNaNInGeometry = (geometry: THREE.BufferGeometry) => {
-    const positionArray = geometry.attributes.position.array;
-    for (let i = 0; i < positionArray.length; i++) {
-      if (isNaN(positionArray[i])) {
-        console.warn("Found NaN values in geometry positions.");
-        return;
-      }
-    }
-    if (!geometry.boundingSphere) {
-      geometry.computeBoundingSphere();
-    }
-  };
-
+  
   return (
     <div
       className={cn(
@@ -87,6 +74,8 @@ export const BentoGridItem = ({
     setCopied(true);
   };
 
+  
+
   return (
     <div
       className={cn(
@@ -108,7 +97,10 @@ export const BentoGridItem = ({
           {img && (
             <img
               src={img}
-              alt={img}
+              alt={img || "image"}
+              onError={(e) => {
+                e.currentTarget.src = "/fallback-image.jpg"; // Replace with a valid fallback image
+              }}
               className={cn(imgClassName, "object-cover object-center ")}
             />
           )}
@@ -153,7 +145,7 @@ export const BentoGridItem = ({
           </div>
 
           {/* for the github 3d globe */}
-          {id === 2 && <GridGlobe />}
+          {/*id === 2 && <GridGlobe /> */}
 
           {/* Tech stack list div */}
           {id === 3 && (
@@ -197,7 +189,16 @@ export const BentoGridItem = ({
                 }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                <Lottie
+                  loop={copied}
+                  autoplay={copied}
+                  animationData={animationData}
+                  rendererSettings={{
+                    preserveAspectRatio: "xMidYMid slice",
+                  }}
+                  height={200}
+                  width={400}
+                />
               </div>
 
               <MagicButton
