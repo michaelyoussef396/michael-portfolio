@@ -1,6 +1,7 @@
 "use client";
 import Certificate from "@/components/Certificate";
-import Hero3D from "@/components/Hero3D";
+import dynamic from "next/dynamic";
+const Hero3D = dynamic(() => import("@/components/Hero3D"), { ssr: false });
 import About from "@/components/About";
 import Tech from "@/components/Tech";
 import Experience from "@/components/Experience";

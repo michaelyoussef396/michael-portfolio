@@ -7,6 +7,9 @@ import { PinContainer } from "./ui/Pin";
 import Image from "next/image";
 
 const RecentProjects = () => {
+  if (!projects || projects.length === 0) {
+    return <p>No recent projects available.</p>;
+  }
   return (
     <div className="py-20">
       <h1 className="heading italic">

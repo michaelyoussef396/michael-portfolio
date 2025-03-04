@@ -2,8 +2,28 @@
 import { motion } from "framer-motion";
 import { styles } from "@/styles";
 import { ComputersCanvas } from "./canvas";
-
+import { useEffect } from "react";
+import * as THREE from "three";
 const Hero3D = () => {
+  useEffect(() => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+
+    document.body.appendChild(renderer.domElement);
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    return () => {
+      console.log("Cleaning up WebGL renderer");
+      renderer.dispose();
+      document.body.removeChild(renderer.domElement);
+    };
+  }, []);
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
