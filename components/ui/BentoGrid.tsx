@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
@@ -9,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
+import * as THREE from 'three';
 import MagicButton from "../MagicButton";
 
 export const BentoGrid = ({
@@ -18,6 +20,20 @@ export const BentoGrid = ({
   className?: string;
   children?: React.ReactNode;
 }) => {
+  // Check for NaN values in geometry positions
+  const checkForNaNInGeometry = (geometry: THREE.BufferGeometry) => {
+    const positionArray = geometry.attributes.position.array;
+    for (let i = 0; i < positionArray.length; i++) {
+      if (isNaN(positionArray[i])) {
+        console.warn("Found NaN values in geometry positions.");
+        return;
+      }
+    }
+    if (!geometry.boundingSphere) {
+      geometry.computeBoundingSphere();
+    }
+  };
+
   return (
     <div
       className={cn(

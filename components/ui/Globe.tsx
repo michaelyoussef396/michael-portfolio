@@ -1,4 +1,5 @@
 "use client";
+import * as THREE from "three";
 import { useEffect, useRef, useState } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
@@ -91,12 +92,25 @@ export function Globe({ globeConfig, data }: WorldProps) {
     ...globeConfig,
   };
 
-  useEffect(() => {
+    useEffect(() => {
     if (globeRef.current) {
-      _buildData();
-      _buildMaterial();
+      // Cast to any to bypass type errors and then check if geometry and its attributes exist.
+      const geom = (globeRef.current as any).geometry as THREE.BufferGeometry | undefined;
+      if (!geom || !geom.attributes || !geom.attributes.position) {
+        console.warn("Geometry or its attributes are not available yet.");
+        return;
+      }
+      const positions = geom.attributes.position.array as unknown as number[];
+      const hasInvalidValue = positions.some((val) => !isFinite(val));
+      if (hasInvalidValue) {
+        console.warn("Found non-finite values in geometry positions.");
+      } else {
+        geom.computeBoundingSphere();
+      }
     }
   }, [globeRef.current]);
+
+
 
   const _buildMaterial = () => {
     if (!globeRef.current) return;
@@ -118,24 +132,30 @@ export function Globe({ globeConfig, data }: WorldProps) {
     let points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
-      const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
+      // Check if arc values are finite
+      if (!isFinite(arc.startLat) || !isFinite(arc.startLng) ||
+          !isFinite(arc.endLat) || !isFinite(arc.endLng)) {
+        console.warn("Invalid coordinate found in arc:", arc);
+        continue; // skip invalid arc
+      }
+      const rgb = hexToRgb(arc.color);
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,
-        color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
+        color: (t: number) => `rgba(${rgb?.r}, ${rgb?.g}, ${rgb?.b}, ${1 - t})`,
         lat: arc.startLat,
         lng: arc.startLng,
       });
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,
-        color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
+        color: (t: number) => `rgba(${rgb?.r}, ${rgb?.g}, ${rgb?.b}, ${1 - t})`,
         lat: arc.endLat,
         lng: arc.endLng,
       });
     }
 
-    // remove duplicates for same lat and lng
+    // Remove duplicates based on lat & lng
     const filteredPoints = points.filter(
       (v, i, a) =>
         a.findIndex((v2) =>
