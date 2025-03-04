@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "@/data";
+import { aboutUsFAQs, navItems } from "@/data";
 
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Certificate from "@/sections/Certificate";
@@ -22,7 +22,7 @@ const AboutMe = () => {
         <Experience />
         <Certificate />
         <Tech />
-        <FAQ />
+        <FAQ faqs={aboutUsFAQs} title="Common Questions" />
         <EmailCTA />
         <Footer />
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "@/data";
+import { contactUsFAQs, navItems } from "@/data";
 import Contact from "@/components/Contact";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Footer from "@/components/Footer";
@@ -13,7 +13,7 @@ const ContactMe = () => {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Contact />
-        <FAQ />
+        <FAQ faqs={contactUsFAQs} title="Contact Us FAQs" />
         <EmailCTA />
         <Footer />
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "@/data";
+import { navItems, servicesFAQs } from "@/data";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
@@ -13,7 +13,7 @@ const Services = () => {
       <FloatingNav navItems={navItems} />
       <ServicesHero />
       <ServicesCarousel />
-      <FAQ />
+      <FAQ faqs={servicesFAQs} title="Services FAQs" />
       <EmailCTA />
       <Footer />
     </main>

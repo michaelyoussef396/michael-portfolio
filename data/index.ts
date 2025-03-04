@@ -185,3 +185,171 @@ export const socialMedia = [
     img: "/link.svg",
   },
 ];
+
+export const homeFAQs = [
+  {
+    question: "How do I get started with a website or digital project?",
+    answer:
+      "To get started, you need a clear goal, branding assets, and any content you’d like to include. I’ll guide you through the process from planning to launch.",
+  },
+  {
+    question: "How much does a custom website or project cost?",
+    answer:
+      "Pricing varies based on the scope and complexity of your project. Once we discuss your needs, I'll provide a transparent quote with no hidden fees.",
+  },
+  {
+    question: "How long does it take to design and develop a website?",
+    answer:
+      "The timeline depends on project complexity. A basic website can take 2-4 weeks, while more advanced projects may take 6-8 weeks or longer.",
+  },
+  {
+    question: "Will my website be optimized for SEO and mobile devices?",
+    answer:
+      "Yes! Every website I build is mobile-friendly and optimized for search engines, ensuring better visibility and performance across all devices.",
+  },
+  {
+    question: "Can I update my website easily after it's built?",
+    answer:
+      "Absolutely! I create user-friendly websites that allow you to update text, images, and content without technical expertise. I also offer ongoing support if needed.",
+  },
+];
+
+export const aboutUsFAQs = [
+  {
+    question: "Who are we and what do we do?",
+    answer:
+      "We are a dedicated team focused on delivering high-quality digital solutions, including web design, development, SEO, and marketing services tailored to your needs.",
+  },
+  {
+    question: "What makes us different from other agencies?",
+    answer:
+      "We combine creativity, technical expertise, and data-driven strategies to craft unique solutions. Our personalized approach ensures that every project stands out.",
+  },
+  {
+    question: "How long have we been in business?",
+    answer:
+      "Our team has years of experience in web development, digital marketing, and automation, helping businesses grow their online presence effectively.",
+  },
+  {
+    question: "What industries do we specialize in?",
+    answer:
+      "We work across various industries, including beauty and personal care, health and wellness, home improvement, real estate, hospitality, and automotive dealerships.",
+  },
+  {
+    question: "How can you get in touch with us?",
+    answer:
+      "You can contact us via email, phone, or through our website’s contact form. We’re always happy to discuss your project and answer any questions!",
+  },
+];
+
+export const blogFAQs = [
+  {
+    question: "What topics do you cover in your blog?",
+    answer:
+      "Our blog explores web development, digital marketing, SEO strategies, automation, and industry trends to help businesses grow online.",
+  },
+  {
+    question: "How often do you publish new blog posts?",
+    answer:
+      "We publish high-quality, insightful blog posts regularly—typically once a week—to keep you updated on the latest industry trends and strategies.",
+  },
+  {
+    question: "Can I contribute or guest post on your blog?",
+    answer:
+      "Yes! We welcome guest contributions from experts in web development, digital marketing, and related fields. Contact us to discuss your ideas.",
+  },
+  {
+    question: "How can I stay updated with new blog posts?",
+    answer:
+      "Subscribe to our newsletter or follow us on social media to get notified about new articles, guides, and industry insights.",
+  },
+  {
+    question: "Do you offer in-depth tutorials or guides?",
+    answer:
+      "Absolutely! Our blog includes detailed tutorials, step-by-step guides, and case studies to help you apply practical strategies to your business.",
+  },
+];
+
+export const contactUsFAQs = [
+  {
+    question: "How can I contact you?",
+    answer:
+      "You can reach us via email, phone, or through our website’s contact form. We’ll respond as soon as possible to assist you with your inquiry.",
+  },
+  {
+    question: "What are your business hours?",
+    answer:
+      "Our business hours are from 9 AM to 6 PM, Monday to Friday. We also accommodate urgent requests outside these hours when possible.",
+  },
+  {
+    question: "Do you offer free consultations?",
+    answer:
+      "Yes! We offer a free initial consultation to understand your needs and discuss the best solutions for your project.",
+  },
+  {
+    question: "How long does it take to get a response?",
+    answer:
+      "We typically respond within 24 hours on business days. If your request is urgent, please mention it in your message.",
+  },
+  {
+    question: "Where are you located?",
+    answer:
+      "We operate remotely and serve clients worldwide. If you need a local meeting, we can arrange a video call to discuss your project.",
+  },
+];
+
+export const portfolioFAQs = [
+  {
+    question: "What kind of projects do you showcase in your portfolio?",
+    answer:
+      "My portfolio features a range of web development, UI/UX design, and automation projects, including custom websites, SEO-optimized platforms, and digital marketing solutions.",
+  },
+  {
+    question: "Can I hire you for a custom project?",
+    answer:
+      "Yes! I offer freelance services for custom website development, design, and marketing solutions. Get in touch to discuss your project needs.",
+  },
+  {
+    question: "Do you provide full-stack development services?",
+    answer:
+      "Absolutely! I specialize in both front-end and back-end development, ensuring a seamless and fully functional digital experience.",
+  },
+  {
+    question: "Are the websites you build optimized for SEO and performance?",
+    answer:
+      "Yes! I ensure all projects are optimized for search engines, mobile-friendly, and built for fast performance to enhance user experience.",
+  },
+  {
+    question: "How can I get in touch to discuss a potential project?",
+    answer:
+      "You can reach out via my contact page, email, or social media. I’d be happy to discuss your vision and how I can help bring it to life.",
+  },
+];
+
+export const servicesFAQs = [
+  {
+    question: "What services do you offer?",
+    answer:
+      "We provide website development, SEO optimization, digital marketing, branding, automation, and custom software solutions tailored to your business needs.",
+  },
+  {
+    question: "How do I choose the right service for my business?",
+    answer:
+      "We offer a free consultation to understand your goals and recommend the best services to enhance your online presence and business growth.",
+  },
+  {
+    question: "Do you offer ongoing support and maintenance?",
+    answer:
+      "Yes! We provide ongoing website maintenance, SEO updates, and marketing support to ensure your online presence stays optimized and competitive.",
+  },
+  {
+    question: "How long does it take to complete a project?",
+    answer:
+      "Project timelines vary depending on complexity. A basic website takes 2-4 weeks, while more advanced projects can take 6-8 weeks or longer.",
+  },
+  {
+    question: "How much do your services cost?",
+    answer:
+      "Pricing is customized based on the scope of work. We provide transparent quotes with no hidden fees after discussing your project needs.",
+  },
+];

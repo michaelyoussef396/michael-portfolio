@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "@/data";
+import { blogFAQs, navItems } from "@/data";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
@@ -14,7 +14,7 @@ const blog = () => {
       {/* If you want it truly full screen, remove max-width constraints */}
       <FloatingNav navItems={navItems} />
       <HeroBlog />
-      <FAQ />
+      <FAQ faqs={blogFAQs} title="Blog FAQs"/>
       <EmailCTA />
       <Footer />
     </main>

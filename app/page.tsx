@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "@/data";
+import { homeFAQs, navItems } from "@/data";
 
 import Hero from "@/sections/Hero";
 import Grid from "@/sections/Grid";
@@ -23,7 +23,7 @@ const Home = () => {
         <Benefits />
         <Clients />
         <Approach />
-        <FAQ />
+        <FAQ faqs={homeFAQs} title="Common Questions" />
         <EmailCTA />
         <Footer />
       </div>
