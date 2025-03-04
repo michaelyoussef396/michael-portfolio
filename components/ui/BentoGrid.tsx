@@ -97,6 +97,7 @@ export const BentoGridItem = ({
         <div className="w-full h-full absolute">
           {img && (
             <Image
+              fill
               src={img}
               alt={img || "image"}
               onError={(e) => {
@@ -113,6 +114,7 @@ export const BentoGridItem = ({
         >
           {spareImg && (
             <Image
+              fill
               src={spareImg}
               alt={spareImg}
               //   width={220}

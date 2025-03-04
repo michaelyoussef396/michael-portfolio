@@ -28,6 +28,8 @@ const Certificate = () => {
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
               <Image
+                height={100}
+                width={100}
                 src={card.thumbnail}
                 alt={card.thumbnail}
                 className="lg:w-32 md:w-20 w-16"

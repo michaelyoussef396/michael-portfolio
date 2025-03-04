@@ -49,17 +49,22 @@ const About: React.FC = () => {
             transition={{ duration: 0.5, type: "tween" }}
             className="flex flex-col justify-start items-start m-8 w-[190px] min-[2000px]:w-[370px] min-[2000px]:mx-16"
           >
-            <Image
-              alt={about.title}
-              src={about.imgUrl}
-              className="w-full h-[170px] min-[2000px]:h-[320px] rounded-[15px] object-cover"
-            />
+            <div className="relative w-full h-[170px] min-[2000px]:h-[320px]">
+              <Image
+                alt={about.title}
+                src={about.imgUrl}
+                height={170}
+                width={370}
+                className="rounded-[15px] object-cover"
+              />
+            </div>
             <h2 className="mt-5 font-bold italic text-2xl text-purple">
               {about.title}
             </h2>
             <p className="mt-2 text-sm text-gray-300">{about.description}</p>
           </motion.div>
         ))}
+
       </div>
     </>
   );
