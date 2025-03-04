@@ -43,9 +43,9 @@ const Contact: React.FC = () => {
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "MichaelYoussefDev",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "michaelyoussef396@gmail.com",
           message: form.message,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
