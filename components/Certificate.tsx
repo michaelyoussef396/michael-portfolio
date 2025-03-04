@@ -1,7 +1,7 @@
 import React from "react";
 
 import { certificates } from "@/data";
-import { Button } from "../components/ui/MovingBorders";
+import { Button } from "./ui/MovingBorders";
 
 const Certificate = () => {
   return (

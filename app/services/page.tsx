@@ -1,6 +1,6 @@
 "use client";
 import HeroVid from "@/components/HeroVid";
-import ServicesCarousel from "@/sections/ServicesCarousel";
+import ServicesCarousel from "@/components/ServicesCarousel";
 const Services = () => {
   return (
     <main className="relative overflow-hidden bg-black-100 w-full h-full">

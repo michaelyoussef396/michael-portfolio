@@ -1,9 +1,9 @@
 "use client";
-import Certificate from "@/sections/Certificate";
-import Hero3D from "@/sections/Hero3D";
-import About from "@/sections/About";
-import Tech from "@/sections/Tech";
-import Experience from "@/sections/Experience";
+import Certificate from "@/components/Certificate";
+import Hero3D from "@/components/Hero3D";
+import About from "@/components/About";
+import Tech from "@/components/Tech";
+import Experience from "@/components/Experience";
 
 const AboutMe = () => {
   return (

@@ -1,10 +1,10 @@
 "use client";
-import Hero from "@/sections/Hero";
-import Grid from "@/sections/Grid";
-import Clients from "@/sections/Clients";
-import Approach from "@/sections/Approach";
-import RecentProjects from "@/sections/RecentProjects";
-import { Benefits } from "@/sections/Benefits";
+import Hero from "@/components/Hero";
+import Grid from "@/components/Grid";
+import Clients from "@/components/Clients";
+import Approach from "@/components/Approach";
+import RecentProjects from "@/components/RecentProjects";
+import { Benefits } from "@/components/Benefits";
 
 const Home = () => {
   return (
